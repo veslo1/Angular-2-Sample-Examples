@@ -15,7 +15,7 @@ export class Tree_Node_Service {
           this._api.dispatchAction({
             key: root.id,
             idType: root.idType,
-            url: 'http://fusionapi.azurewebsites.net/api/site/getallpanels?siteId=' + root.id,
+            url: '<some url>' + root.id,
             name: 'LOAD_NODES'
           });
           break;
@@ -25,7 +25,7 @@ export class Tree_Node_Service {
           this._api.dispatchAction({
             key: root.id,
             idType: root.idType,
-            url: 'http://fusionapi.azurewebsites.net/api/site/getallloops?panelId=' + root.id,
+            url: '<some url>' + root.id,
             name: 'LOAD_NODES'
           });
           break;
@@ -35,7 +35,7 @@ export class Tree_Node_Service {
           this._api.dispatchAction({
             key: root.id,
             idType: root.idType,
-            url: 'http://fusionapi.azurewebsites.net/api/Site/GetDevices?loopId=' + root.id,
+            url: '<some url>' + root.id,
             name: 'LOAD_NODES'
           });
           break;
