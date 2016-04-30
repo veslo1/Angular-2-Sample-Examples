@@ -1,0 +1,38 @@
+<h1>Physical Loop View</h1>
+<div style="float:left;  width:50%">
+    <tree-view [root]="node" (childChanged)="displayValue=$event"></tree-view>
+</div>
+<div style="float:left;width:50%;border: 1px dashed blue;" *ngIf="displayValue">
+    <label>Detailed View :</label>
+    <div *ngIf="displayValue.idType === 'PanelID'">
+        <label for="txtcAndEStatus">cAndEStatus:<input #txtcAndEStatus type="text" value="{{displayValue.tag.cAndEStatus}}"></label>
+        <label for="txtloopCount">Loop Count:<input #txtloopCount type="text" value="{{displayValue.tag.loopCount}}"></label>
+        <label for="txtpanelAddress">Panel Address:<input #txtpanelAddress type="text" value="{{displayValue.tag.panelAddress}}"></label>
+        <label for="txtpanelId">Panel Id:<input #txtpanelId type="text" value="{{displayValue.tag.panelId}}"></label>
+        <label for="txtpanelName">Panel Name:<input #txtpanelName type="text" value="{{displayValue.tag.panelName}}"></label>
+        <label for="txtpanelType">Panel Type:<input #txtpanelType type="text" value="{{displayValue.tag.panelType}}"></label>
+    </div>
+    <div *ngIf="displayValue.idType === 'LoopId'">
+        <label for="txtLoopNumber">Loop Number:<input #txtLoopNumber type="text" value="{{displayValue.tag.LoopNumber}}"></label>
+        <label for="txtdeviceCount">Device Count:<input #txtdeviceCount type="text" value="{{displayValue.tag.deviceCount}}"></label>
+        <label for="txtloopCardVersion">Loop Card Version:<input #txtloopCardVersion type="text" value="{{displayValue.tag.loopCardVersion}}"></label>
+        <label for="txtloopId">Loop Id:<input #txtloopId type="text" value="{{displayValue.tag.loopId}}"></label>
+        <label for="txtloopLabel">Loop Label:<input #txtloopLabel type="text" value="{{displayValue.tag.loopLabel}}"></label>
+        <label for="txtpanelId">Panel Id:<input #txtpanelId type="text" value="{{displayValue.tag.panelId}}"></label>
+    </div>
+    <div *ngIf="displayValue.idType === 'DeviceId'">
+        <label for="txtcoIncidenceLevel">coIncidenceLevel:<input #txtcoIncidenceLevel type="text" value="{{displayValue.tag.coIncidenceLevel}}"></label>
+        <label for="txtdescription">Description:<input #txtdescription type="text" value="{{displayValue.tag.description}}"></label>
+        <label for="txtdetectionZone">Detection Zone:<input #txtdetectionZone type="text" value="{{displayValue.tag.detectionZone}}"></label>
+        <label for="txtdeviceAddress">Device Address:<input #txtdeviceAddress type="text" value="{{displayValue.tag.deviceAddress}}"></label>
+        <label for="txtdeviceIcon">Device Icon:<input #txtdeviceIcon type="text" value="{{displayValue.tag.deviceIcon}}"></label>
+        <label for="txtdeviceId">Device Id:<input #txtdeviceId type="text" value="{{displayValue.tag.deviceId}}"></label>
+        <label for="txtdeviceLabel">Device Label:<input #txtdeviceLabel type="text" value="{{displayValue.tag.deviceLabel}}"></label>
+        <label for="txtdevicePosition">Device Position:<input #txtdevicePosition type="text" value="{{displayValue.tag.devicePosition}}"></label>
+        <label for="txtdeviceType">Device Type:<input #txtdeviceType type="text" value="{{displayValue.tag.deviceType}}"></label>
+        <label for="txtdloopId">Loop Id:<input #txtdloopId type="text" value="{{displayValue.tag.loopId}}"></label>
+        <label for="txtmonitoredInputType">Monitored Input Type:<input #txtmonitoredInputType type="text" value="{{displayValue.tag.monitoredInputType}}"></label>
+        <label for="txtpartNo">Part No:<input #txtpartNo type="text" value="{{displayValue.tag.partNo}}"></label>
+        <label for="txtsensitivityLevel">Sensitivity Level:<input #txtsensitivityLevel type="text" value="{{displayValue.tag.sensitivityLevel}}"></label>
+    </div>
+</div>

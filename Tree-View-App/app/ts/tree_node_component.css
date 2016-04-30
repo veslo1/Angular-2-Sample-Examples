@@ -1,0 +1,12 @@
+.selectedNode {
+  background-color: lightskyblue !important;
+  color: white;
+  border-radius: 4px;
+  padding: 0 .3em;
+}
+
+span:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+  border-radius: 4px;
+}
