@@ -17,8 +17,6 @@ export class Store {
     }
 
     private handleAction(action) {
-        var apiurl = 'http://fusionapi.azurewebsites.net/api/site/getallpanels?siteId=64909fee-e52e-4051-8277-8ba2101e743b';
-        //var apiurl = 'http://localhost/Fusion.API/api/site/getallpanels?siteId=64909fee-e52e-4051-8277-8ba2101e743b';
 
         if (action.name === 'LOAD_NODES') {
             if (this.nodes[action.key]) {
@@ -56,13 +54,4 @@ export class Store {
     dispatchAction(action) {
         this.dispatcher.next(action);
     }
-}
-
-class Panle
-{
-    cAndEStatus: string;
-    loopCount: string;
-    panelId: string;
-    panelName: string;
-    panelType: string;
 }
