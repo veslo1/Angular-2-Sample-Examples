@@ -16,6 +16,6 @@ export class SiteView_Component {
     node: Tree_Node = null;
     displayValue: any = null;
     ngOnInit() {
-        this.node = new Tree_Node("SiteId", "64909fee-e52e-4051-8277-8ba2101e743b", 0);
+        this.node = new Tree_Node("root", "some id", 0);
     }
 }
