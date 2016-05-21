@@ -3,7 +3,7 @@ import {Router} from 'angular2/router';
 import {ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
 
 @Component({
-  selector: 'lhome',
+  selector: '`login',
   templateUrl: 'app/ts/login.html',
   directives: [ROUTER_DIRECTIVES]
 })
