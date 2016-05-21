@@ -11,6 +11,6 @@ export class LoginComponent {
 
   constructor(private _router: Router) {
 
-    //_router.navigate(['/Users/Home1']);
+    //_router.navigate(['/Home/Page1']);
   }
 }
