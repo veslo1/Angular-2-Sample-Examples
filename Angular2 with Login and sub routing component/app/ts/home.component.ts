@@ -1,20 +1,22 @@
 import {Component} from 'angular2/core';
-import {ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
-import {StartupComponent} from './startup.component';
-import {LoginComponent} from './login.component';
-import {HomeComponent} from './home.component';
+import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Page1Component} from './page1.component';
+import {Page2Component} from './page2.component';
 
 @Component({
-  selector: 'my-app',
-  template: '<router-outlet></router-outlet>',
+  template: `
+  Home Page<br>
+  <a [routerLink]="['./Page1']">Profile</a> |
+  <a [routerLink]="['./Page2', {id: 1234}]">Page2</a><br>
+  <br><br>
+  <router-outlet></router-outlet>`,
   directives: [ROUTER_DIRECTIVES]
 })
 
 @RouteConfig([
-  { path: '/', component: StartupComponent, name: 'StartUp' },
-  { path: '/login', component: LoginComponent, name: 'Login' },
-  { path: '/fts/...', component: HomeComponent, name: 'Home' }
+  { path: '/', component: Page1Component, name: 'Page1' },
+  { path: '/:id/page2', component: Page2Component, name: 'Page2' }
 ])
 
-export class AppComponent {
+export class HomeComponent {
 }
